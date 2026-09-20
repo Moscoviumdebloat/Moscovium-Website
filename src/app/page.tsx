@@ -9,6 +9,7 @@ import { siteConfig } from "@/app/config";
 import { cn } from '@/lib/utils';
 import { useToast } from '@/hooks/use-toast';
 import { Heart } from 'lucide-react';
+import { InstallCommand } from '@/components/install-command';
 
 export default function Home() {
   const [logoClicks, setLogoClicks] = useState(0);
@@ -115,6 +116,10 @@ export default function Home() {
               Download Now
             </Button>
           </Link>
+        </div>
+
+        <div style={{ animationDelay: '900ms' }} className="mt-10 flex w-full justify-center animate-fade-in-up">
+          <InstallCommand />
         </div>
       </main>
 
