@@ -13,6 +13,10 @@ type SiteConfig = {
   // optional: Windows PowerShell assumes http:// and does not follow the 308
   // the host answers with, so the scheme has to be part of the shown command.
   cliInstallUrl: string;
+  // The raw GitHub address, shown as a fallback for anyone the short link
+  // does not reach - a DNS block, a corporate proxy, or the short domain
+  // being down. Same script, one more hop to look at.
+  cliDirectUrl: string;
   donationLink: string;
   // To add a background image or GIF, simply provide its URL here.
   // For example: "https://example.com/my-background.gif"
@@ -40,6 +44,8 @@ export const siteConfig: SiteConfig = {
   ],
   downloadLink: "https://github.com/Moscoviumdebloat/Moscovium/releases/latest",
   cliInstallUrl: "https://cli.moscovium.xyz",
+  cliDirectUrl:
+    "https://raw.githubusercontent.com/Moscoviumdebloat/Moscovium-CLI/main/moscovium.ps1",
   donationLink: "https://www.tipeeestream.com/yabosen/donation",
   backgroundUrl: "/Illustration.gif",
 };
